@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+a,input[type=submit]{
+    cursor: pointer;
+}
+.app{
+    margin:0;   
+    display: flex;    
+    flex-wrap: wrap;  
+    position: relative; 
+}

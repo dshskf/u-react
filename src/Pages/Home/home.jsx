@@ -35,7 +35,7 @@ class HomePage extends React.Component {
 				<Header />
 				<Promo />
 				<Product />
-				<Pagination />
+				{/* <Pagination /> */}
 				<Footer />
 			</div>
 		);

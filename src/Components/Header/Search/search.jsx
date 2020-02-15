@@ -28,8 +28,7 @@ class SearchBar extends React.Component {
 
 	componentDidMount() {
 		const { user, fetch_cart_start, userPage } = this.props;
-		console.log(userPage)
-		this.setState({ search: userPage.userInput || ""});
+		this.setState({ search: userPage ? userPage.userInput : "" });
 		if (user) {
 			fetch_cart_start(user.id);
 		}

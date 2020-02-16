@@ -12,7 +12,7 @@ import {
 } from './product-action'
 
 function fetching(data) {
-    return fetch('https://ustoreapi.herokuapp.com/', {
+    return fetch('http://localhost:9000/', {
         headers: {
             Authorization: JSON.stringify({
                 search: data.userInput,
@@ -27,13 +27,13 @@ function fetching(data) {
 }
 
 function getSingleProduct(prodId) {
-    return fetch('https://ustoreapi.herokuapp.com/products/details/' + prodId)
+    return fetch('http://localhost:9000/products/details/' + prodId)
         .then(res => res.json())
         .then(data => data)
 }
 
 function deleteProduct(prodId) {
-    return fetch('https://ustoreapi.herokuapp.com/seller/delete-product', {
+    return fetch('http://localhost:9000/seller/delete-product', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ function deleteProduct(prodId) {
 }
 
 function fetchUserProduct(userId) {
-    return fetch('https://ustoreapi.herokuapp.com/user/products', {
+    return fetch('http://localhost:9000/user/products', {
         headers: {
             Authorization: userId,
             'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ function fetchUserProduct(userId) {
 }
 
 function fetchSellerInvoice(sellerId){
-    return fetch('https://ustoreapi.herokuapp.com/seller/invoice', {
+    return fetch('http://localhost:9000/seller/invoice', {
         headers: {
             Authorization: sellerId,
             'Content-Type': 'application/json',

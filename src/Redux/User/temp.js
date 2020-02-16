@@ -14,7 +14,7 @@ import {
 } from './user-action';
 
 function postData(email, password) {
-    return fetch('https://ustoreapi.herokuapp.com/user/login', {
+    return fetch('http://localhost:9000/user/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ function postData(email, password) {
 }
 
 function postSignUpData(data) {
-    return fetch('https://ustoreapi.herokuapp.com/user/register', {
+    return fetch('http://localhost:9000/user/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ function postSignUpData(data) {
 }
 
 function getUserData(userId) {
-    return fetch('https://ustoreapi.herokuapp.com/user/edit', {
+    return fetch('http://localhost:9000/user/edit', {
         headers: {
             Authorization: userId,
             'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ function getUserData(userId) {
 }
 
 function postUserUpdate(data) {
-    return fetch('https://ustoreapi.herokuapp.com/user/edit', {
+    return fetch('http://localhost:9000/user/edit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ function postUserUpdate(data) {
 }
 
 function getTotalDocument(data) {
-    return fetch('https://ustoreapi.herokuapp.com/total-document', {
+    return fetch('http://localhost:9000/total-document', {
         headers: {
             Authorization: JSON.stringify({
                 search: data.userInput,
@@ -79,7 +79,7 @@ function getTotalDocument(data) {
 }
 
 function sendEmail(email) {
-    return fetch('https://ustoreapi.herokuapp.com/user/request', {
+    return fetch('http://localhost:9000/user/request', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ function sendEmail(email) {
 }
 
 function resetPassword(data) {
-    return fetch('https://ustoreapi.herokuapp.com/user/reset', {
+    return fetch('http://localhost:9000/user/reset', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ function resetPassword(data) {
 }
 
 function authResetUser(token) {
-    return fetch('https://ustoreapi.herokuapp.com/user/reset', {
+    return fetch('http://localhost:9000/user/reset', {
         headers: {
             Authorization: JSON.stringify(token),
             'Content-Type': 'application/json',

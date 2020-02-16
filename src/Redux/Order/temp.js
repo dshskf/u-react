@@ -3,7 +3,7 @@ import { orderType, fetch_detail_success, fetch_fail } from './order-action'
 
 
 function fetchDetail(userId) {
-    return fetch("https://ustoreapi.herokuapp.com/payment/data", {
+    return fetch("http://localhost:9000/payment/data", {
         headers: {
             Authorization: userId,
             'Content-Type': 'application/json'

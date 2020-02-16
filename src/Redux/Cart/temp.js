@@ -10,7 +10,7 @@ import {
 } from './cart-action'
 
 function onFetchCart(userId) {
-    return fetch('https://ustoreapi.herokuapp.com/carts', {
+    return fetch('http://localhost:9000/carts', {
         headers: {
             Authorization: userId,
             'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ function onFetchCart(userId) {
 }
 
 function postAddCart(data) {
-    return fetch('https://ustoreapi.herokuapp.com/products/add', {
+    return fetch('http://localhost:9000/products/add', {
         method: "POST",
         headers: {
             //Authorization: userId,
@@ -36,7 +36,7 @@ function postAddCart(data) {
 }
 
 function postCartData(data) {
-    return fetch('https://ustoreapi.herokuapp.com/products/update', {
+    return fetch('http://localhost:9000/products/update', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ function postCartData(data) {
 }
 
 function postCourierData(data) {
-    return fetch('https://ustoreapi.herokuapp.com/carts/courier-cost', {
+    return fetch('http://localhost:9000/carts/courier-cost', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function postCourierData(data) {
 }
 
 function postCartToPay(data) {
-    return fetch('https://ustoreapi.herokuapp.com/payment/add', {
+    return fetch('http://localhost:9000/payment/add', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
